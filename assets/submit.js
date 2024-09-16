@@ -20,7 +20,13 @@ document.querySelector('.btn-login').addEventListener('click', function() {
         checked = false;
         emailInput.classList.add('err-required');
     } else {
-        emailInput.classList.remove('err-required');
+
+        if (email.includes('@')) {
+            emailInput.classList.remove('err-required');
+            } else {
+            emailInput.classList.add('err-required');
+            }
+
     }
     if (!agreementCheckbox.checked) {
         checked = false;
