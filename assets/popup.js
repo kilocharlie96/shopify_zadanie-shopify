@@ -2,10 +2,10 @@ const exitButton = document.querySelector('.btn-exit');
 const overlay = document.querySelector('.overlay');
 
 window.addEventListener('load', function() {
-    if (!localStorage.getItem('overlayDisplayed')) {
+    if (!sessionStorage.getItem('overlayDisplayed')) {
         setTimeout(function() {
             overlay.classList.remove('hidden');
-            localStorage.setItem('overlayDisplayed', 'true');
+            sessionStorage.setItem('overlayDisplayed', 'true');
         }, 2000); // 2 sekundy, pre prezentačné účely
     }
 });
