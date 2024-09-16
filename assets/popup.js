@@ -2,9 +2,12 @@ const exitButton = document.querySelector('.btn-exit');
 const overlay = document.querySelector('.overlay');
 
 window.addEventListener('load', function() {
-    setTimeout(function() {
-        overlay.classList.remove('hidden');
-    }, 2000); //nastavené 2 sekundy, pre prezentačné účely, aby sa nemuselo dlho čakať
+    if (!localStorage.getItem('overlayDisplayed')) {
+        setTimeout(function() {
+            overlay.classList.remove('hidden');
+            localStorage.setItem('overlayDisplayed', 'true');
+        }, 2000); // 2 sekundy, pre prezentačné účely
+    }
 });
 
 exitButton.addEventListener('click', function() {
