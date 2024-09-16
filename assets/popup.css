@@ -1,0 +1,141 @@
+@font-face {
+  font-family: 'Mikela';
+  src: url('//www.bloomrobbins.sk/cdn/shop/t/34/assets/Mikela-Bold.woff?v=142287985731815488401687268887') format('woff');
+}
+
+@font-face {
+  font-family: 'ABCMonumentGrotesk';
+  src: url('//www.bloomrobbins.sk/cdn/shop/t/34/assets/ABCMonumentGrotesk-Bold.woff2?v=71855437841205158051687268885') format('woff');
+}
+
+div.overlay {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: #f9f9f9;
+}
+.popup {
+    display: flex;
+    flex-direction: row;
+    border-radius: 1rem;
+    overflow: hidden;
+    height: 640px;
+    width: 870px;
+
+}
+
+.hidden {
+    display: none;
+}
+
+.left-img {
+    background: url(//6f47b9-7f.myshopify.com/cdn/shop/t/2/assets/image.svg?v=72492941095743167081726047022);
+    background-size: cover;
+    background-repeat: no-repeat;
+    flex: 0 0 400px;
+
+}
+
+.right-content {
+    display: flex;
+    flex-direction: column;
+    background: #ffe0f9;
+}
+
+button, input {
+    border: none;
+}
+
+input.is-input {
+    padding-left: 1.5rem;
+    font-size: 1rem;
+    font-weight: bolder;
+}
+      
+.is-input {
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    height: 5rem;
+}
+
+button:hover, button:active {
+    cursor: pointer;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: right;
+}
+
+.btn-container button {
+    background: none;
+    padding: 0.5rem 0.5rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 4rem;
+}
+
+h1.first, h1.second {
+    margin: 0;
+    color: #f50d3a;
+}
+
+h1.first {
+    font-family: "Mikela", serif;
+    font-size: 5rem;
+}
+
+h1.second {
+    font-size: 3.3rem;
+    font-weight: bold;
+    font-family: "ABCMonumentGrotesk", sans-serif;
+}
+
+p {
+    font-family: "ABCMonumentGrotesk", sans-serif;
+    color: #949494;
+    
+}
+
+.agreement {
+    margin: 1.5rem 0;
+    display: flex;
+    border-radius: 0.3rem;
+    padding: 0.15rem;
+    font-size: 1.5rem;
+}
+
+.agreement input:hover, .agreement input:active {
+    cursor: pointer;
+}
+
+.agreement p {
+    margin: 0 0 0 0.35rem;
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+    color: #f50d3a;
+}
+
+button.btn-login {
+    background: #f50d3a;
+    color: white;
+    margin-top: 0;
+    font-family: "ABCMonumentGrotesk", sans-serif;
+}
+
+button.btn-login:hover, button.btn-login:active {
+      box-shadow: 0px 0px 0.7rem grey;
+}
+
+.err-required {
+    border: #f50d3a solid 0.15rem;
+}
