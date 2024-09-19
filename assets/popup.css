@@ -1,169 +1,169 @@
 @font-face {
     font-family: 'Mikela';
     src: url('//www.bloomrobbins.sk/cdn/shop/t/34/assets/Mikela-Bold.woff?v=142287985731815488401687268887') format('woff');
-}
-
-@font-face {
+  }
+  
+  @font-face {
     font-family: 'ABCMonumentGrotesk';
     src: url('//www.bloomrobbins.sk/cdn/shop/t/34/assets/ABCMonumentGrotesk-Bold.woff2?v=71855437841205158051687268885') format('woff');
-}
-
-:root {
-    --red-bloom: #f50d3a;
-    --bg-bloom: #ffe0f9;
-    --grey-bloom: #949494;
-}
-
-div.overlay {
-    height: 100vh;
-    width: 100vw;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  }
+  
+  :root {
+      --red-bloom: oklch(61.53% 0.244 22.01);
+      --bg-bloom: oklch(93.94% 0.047 332.48);
+      --grey-bloom: oklch(66.65% 0 0);
+  }
+  
+  div.overlay {
+      height: 100vh;
+      width: 100vw;
+  
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+      text-align: center;
+      background: oklch(65.67% 0 0 / 73%);
+      
+      z-index: 9999;
+      position: fixed;
+  }
+  .popup {
+      display: flex;
+      flex-direction: row;
     
-    text-align: center;
-    background: rgba(145, 145, 145, 0.73);
+      border-radius: 1rem;
+      overflow: hidden;
     
-    z-index: 9999;
-    position: fixed;
-}
-.popup {
-    display: flex;
-    flex-direction: row;
-
-    border-radius: 1rem;
-    overflow: hidden;
-
-    height: 640px;
-    width: 870px;
-
-    color: var(--red-bloom);
-
-}
-
-.hidden {
-    display: none;
-}
-
-.left-img {
-    background: url(//6f47b9-7f.myshopify.com/cdn/shop/t/2/assets/image.svg?v=72492941095743167081726047022);
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    flex: 0 0 400px;
-
-}
-
-.right-content {
-    display: flex;
-    flex-direction: column;
-
-    background: var(--bg-bloom);
-}
-
-button, input {
-    border: none;
-}
-
-input.is-input {
-    padding-left: 1.5rem;
-
-    font-size: 1rem;
-    font-weight: bolder;
-}
+      height: 640px;
+      width: 870px;
     
-.is-input {
-    margin-top: 1rem;
-    border-radius: 1rem;
-    height: 6rem;
-}
-
-button:hover, button:active {
-    cursor: pointer;
-}
-
-.btn-container {
-    display: flex;
-    justify-content: right;
-}
-
-.btn-container button {
-    background: none;
-    padding: 0.5rem 0.5rem;
-}
-
-.content {
-    display: flex;
-    flex-direction: column;
-
-    padding: 1rem 5rem;
-}
-
-h1.first, h1.second {
-    margin: 0;
-    color: var(--red-bloom);
-}
-
-h1.first {
-    font-family: "Mikela", serif;
-    font-size: 4rem;
-}
-
-h1.second {
-    font-size: 3.3rem;
-    font-weight: bold;
-    font-family: "ABCMonumentGrotesk", sans-serif;
-}
-
-p {
-    font-family: "ABCMonumentGrotesk", sans-serif;
-    color: var(--grey-bloom);
+      color: var(--red-bloom);
+  
+  }
+  
+  .hidden {
+      display: none;
+  }
+  
+  .left-img {
+      background: url(//6f47b9-7f.myshopify.com/cdn/shop/t/2/assets/image.svg?v=72492941095743167081726047022);
+      background-size: cover;
+      background-repeat: no-repeat;
     
-}
-
-.content > p {
-    padding: 0 1.5rem;
-}
-
-.agreement {
-    margin: 1.5rem 0;
-    padding: 0.15rem;
-    border-radius: 0.3rem;
-
-    display: flex;
-
-    font-size: 1.5rem;
-}
-
-.agreement input:hover, .agreement input:active {
-    cursor: pointer;
-}
-
-.agreement p {
-    margin: 0 0 0 0.35rem;
-    text-align: left;
-}
-
-a {
-    text-decoration: none;
-    color: var(--red-bloom);
-}
-
-button.btn-login {
-    background: var(--red-bloom);
-    margin-top: 0;
-
-    color: white;
-    font-family: "ABCMonumentGrotesk", sans-serif;
-
-
-}
-
-button.btn-login:hover, button.btn-login:active {
-    box-shadow: 0px 0px 0.7rem grey;
-}
-
-.err-required {
-    border: var(--red-bloom) solid 0.15rem;
-}
+      flex: 0 0 400px;
+  
+  }
+  
+  .right-content {
+      display: flex;
+      flex-direction: column;
+    
+      background: var(--bg-bloom);
+  }
+  
+  button, input {
+      border: none;
+  }
+  
+  input.is-input {
+      padding-left: 1.5rem;
+    
+      font-size: 1rem;
+      font-weight: bolder;
+  }
+        
+  .is-input {
+      margin-top: 1rem;
+      border-radius: 1rem;
+      height: 6rem;
+  }
+  
+  button:hover, button:active {
+      cursor: pointer;
+  }
+  
+  .btn-container {
+      display: flex;
+      justify-content: right;
+  }
+  
+  .btn-container button {
+      background: none;
+      padding: 0.5rem 0.5rem;
+  }
+  
+  .content {
+      display: flex;
+      flex-direction: column;
+    
+      padding: 1rem 5rem;
+  }
+  
+  h1.first, h1.second {
+      margin: 0;
+      color: var(--red-bloom);
+  }
+  
+  h1.first {
+      font-family: "Mikela", serif;
+      font-size: 4rem;
+  }
+  
+  h1.second {
+      font-size: 3.3rem;
+      font-weight: bold;
+      font-family: "ABCMonumentGrotesk", sans-serif;
+  }
+  
+  p {
+      font-family: "ABCMonumentGrotesk", sans-serif;
+      color: var(--grey-bloom);
+      
+  }
+  
+  .content > p {
+      padding: 0 1.5rem;
+  }
+  
+  .agreement {
+      margin: 1.5rem 0;
+      padding: 0.15rem;
+      border-radius: 0.3rem;
+    
+      display: flex;
+    
+      font-size: 1.5rem;
+  }
+  
+  .agreement input:hover, .agreement input:active {
+      cursor: pointer;
+  }
+  
+  .agreement p {
+      margin: 0 0 0 0.35rem;
+      text-align: left;
+  }
+  
+  a {
+      text-decoration: none;
+      color: var(--red-bloom);
+  }
+  
+  button.btn-login {
+      background: var(--red-bloom);
+      margin-top: 0;
+    
+      color: white;
+      font-family: "ABCMonumentGrotesk", sans-serif;
+  
+  
+  }
+  
+  button.btn-login:hover, button.btn-login:active {
+        box-shadow: 0px 0px 0.7rem grey;
+  }
+  
+  .err-required {
+      border: var(--red-bloom) solid 0.15rem;
+  }
