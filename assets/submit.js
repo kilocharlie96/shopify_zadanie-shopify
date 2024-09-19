@@ -16,18 +16,13 @@ document.querySelector('.btn-login').addEventListener('click', function() {
         nameInput.classList.remove('err-required');
     }
 
-    if (emailInput.value.trim() === '') {
+    if (emailInput.value.trim() === '' || !email.includes('@')) {
         checked = false;
         emailInput.classList.add('err-required');
     } else {
-
-        if (email.includes('@')) {
-            emailInput.classList.remove('err-required');
-            } else {
-            emailInput.classList.add('err-required');
-            }
-
+        emailInput.classList.remove('err-required');
     }
+  
     if (!agreementCheckbox.checked) {
         checked = false;
         agreement.classList.add('err-required');
@@ -38,7 +33,7 @@ document.querySelector('.btn-login').addEventListener('click', function() {
 
       fetch('https://6f47b9-7f.myshopify.com/admin/api/2024-07/customers.json', {
     method: 'POST',
-    headers: { 
+    headers: {
         'X-Shopify-Access-Token': '****', //kvôli GIT-u vymazaný token
         'Content-Type': 'application/json'
     },
@@ -59,6 +54,4 @@ document.querySelector('.btn-login').addEventListener('click', function() {
 
         }
     }
-
-
 });
