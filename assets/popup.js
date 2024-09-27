@@ -13,3 +13,7 @@ window.addEventListener('load', function() {
 exitButton.addEventListener('click', function() {
     overlay.classList.add('hidden');
 });
+
+document.querySelector('.btn-success').addEventListener('click', function() {
+    document.querySelector('.overlay').classList.add('hidden');
+});

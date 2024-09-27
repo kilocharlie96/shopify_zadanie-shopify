@@ -8,24 +8,37 @@
   src: url('//www.bloomrobbins.sk/cdn/shop/t/34/assets/ABCMonumentGrotesk-Bold.woff2?v=71855437841205158051687268885') format('woff');
 }
 
+:root {
+    --red-bloom: oklch(61.53% 0.244 22.01);
+    --bg-bloom: oklch(93.94% 0.047 332.48);
+    --grey-bloom: oklch(66.65% 0 0);
+}
+
 div.overlay {
     height: 100vh;
     width: 100vw;
+
     display: flex;
     align-items: center;
     justify-content: center;
+    
     text-align: center;
-    background: rgba(145, 145, 145, 0.73);
+    background: oklch(65.67% 0 0 / 73%);
+    
     z-index: 9999;
     position: fixed;
 }
 .popup {
     display: flex;
     flex-direction: row;
+  
     border-radius: 1rem;
     overflow: hidden;
+  
     height: 640px;
     width: 870px;
+  
+    color: var(--red-bloom);
 
 }
 
@@ -34,17 +47,16 @@ div.overlay {
 }
 
 .left-img {
-    background: url({{ 'image.svg' | asset_url }});
+    background: url(//6f47b9-7f.myshopify.com/cdn/shop/t/2/assets/image.svg?v=72492941095743167081726047022);
     background-size: cover;
     background-repeat: no-repeat;
+  
     flex: 0 0 400px;
 
 }
 
 .right-content {
-    display: flex;
-    flex-direction: column;
-    background: #ffe0f9;
+    background: var(--bg-bloom);
 }
 
 button, input {
@@ -53,18 +65,20 @@ button, input {
 
 input.is-input {
     padding-left: 1.5rem;
-    font-size: 1rem;
+  
+    font-size: 1.5rem;
     font-weight: bolder;
 }
       
 .is-input {
     margin-top: 1rem;
-    border-radius: 0.5rem;
-    height: 5rem;
+    border-radius: 1rem;
+    height: 6rem;
 }
 
 button:hover, button:active {
     cursor: pointer;
+    box-shadow: 0px 0px 0.7rem grey;
 }
 
 .btn-container {
@@ -80,17 +94,18 @@ button:hover, button:active {
 .content {
     display: flex;
     flex-direction: column;
-    padding: 1rem 4rem;
+  
+    padding: 1rem 5rem;
 }
 
 h1.first, h1.second {
     margin: 0;
-    color: #f50d3a;
+    color: var(--red-bloom);
 }
 
 h1.first {
     font-family: "Mikela", serif;
-    font-size: 5rem;
+    font-size: 6rem;
 }
 
 h1.second {
@@ -101,15 +116,21 @@ h1.second {
 
 p {
     font-family: "ABCMonumentGrotesk", sans-serif;
-    color: #949494;
+    color: var(--grey-bloom);
     
+}
+
+.content > p {
+    padding: 0 1.5rem;
 }
 
 .agreement {
     margin: 1.5rem 0;
-    display: flex;
-    border-radius: 0.3rem;
     padding: 0.15rem;
+    border-radius: 0.3rem;
+  
+    display: flex;
+  
     font-size: 1.5rem;
 }
 
@@ -124,20 +145,107 @@ p {
 
 a {
     text-decoration: none;
-    color: #f50d3a;
+    color: var(--red-bloom);
 }
 
-button.btn-login {
-    background: #f50d3a;
-    color: white;
+button.btn-login, button.btn-success {
+    background: var(--red-bloom);
     margin-top: 0;
+  
+    color: white;
     font-family: "ABCMonumentGrotesk", sans-serif;
 }
 
-button.btn-login:hover, button.btn-login:active {
-      box-shadow: 0px 0px 0.7rem grey;
+.err-required {
+    border: var(--red-bloom) solid 0.15rem;
 }
 
-.err-required {
-    border: #f50d3a solid 0.15rem;
+.announcement {
+  padding: 3vw;
+
+  background: var(--bg-bloom);
+  border-radius: 1rem;
+
+  color: var(--red-bloom);
+  font-family: "Mikela", serif;
+}
+
+.announcement button.btn-success {
+  margin-top: 2vw;
+  width: 70%;
+}
+
+@media (max-width: 1000px) {
+    .popup {
+      height: 640px;
+      width: 660px;
+    }
+    
+    .left-img {
+      flex: 0 0 260px;  
+    }
+    
+    .content {
+      padding: 3rem 2rem;
+    }
+}
+
+@media (max-width: 750px) {
+    .popup {
+      width: 560px;
+      height: 640px;
+    }
+
+    .left-image {
+      flex: 0 0 240px;
+    }
+
+    .content {
+      padding: 1rem 3rem;
+    }
+  
+    h1.second {
+      font-size: 2.7rem;
+    }
+
+  .is-input {
+    height: 4.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+    .popup {
+      height: 540px;
+      width: 420px;
+    }
+    .left-img {
+      display: none;
+    }
+
+    .content {
+      padding: 0 5rem;
+    }
+}
+  
+@media (max-width: 490px) {
+    .popup {
+      height: 580px;
+      width: 320px;
+    }
+    
+    .left-img {
+      display: none;
+    }
+
+    .content {
+      padding: 0 2rem;
+    }
+
+    h1.first {
+      font-size: 4.5rem;
+    }
+
+    h1.second {
+      font-size: 2.6rem;
+    }
 }

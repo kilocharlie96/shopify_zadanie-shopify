@@ -7,6 +7,7 @@ document.querySelector('.btn-login').addEventListener('click', function() {
     const agreementCheckbox = document.getElementById('agreement');
     const agreement = document.querySelector('.agreement');
     const overlay = document.querySelector('.overlay');
+    const popup = document.querySelector('.popup');
     var checked = true;
 
     if (nameInput.value.trim() === '') {
@@ -49,8 +50,9 @@ document.querySelector('.btn-login').addEventListener('click', function() {
 .then(response => response.json())
 .then(data => console.log(data))
 .catch(error => console.error('Error:', error));
-
-          overlay.classList.add('hidden');
+          
+            popup.classList.add('hidden');
+            document.querySelector('.announcement').classList.remove('hidden');
 
         }
     }

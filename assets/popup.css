@@ -1,244 +1,251 @@
 @font-face {
-    font-family: 'Mikela';
-    src: url('//www.bloomrobbins.sk/cdn/shop/t/34/assets/Mikela-Bold.woff?v=142287985731815488401687268887') format('woff');
-  }
-  
-  @font-face {
-    font-family: 'ABCMonumentGrotesk';
-    src: url('//www.bloomrobbins.sk/cdn/shop/t/34/assets/ABCMonumentGrotesk-Bold.woff2?v=71855437841205158051687268885') format('woff');
-  }
-  
-  :root {
-      --red-bloom: oklch(61.53% 0.244 22.01);
-      --bg-bloom: oklch(93.94% 0.047 332.48);
-      --grey-bloom: oklch(66.65% 0 0);
-  }
-  
-  div.overlay {
-      height: 100vh;
-      width: 100vw;
-  
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      
-      text-align: center;
-      background: oklch(65.67% 0 0 / 73%);
-      
-      z-index: 9999;
-      position: fixed;
-  }
-  .popup {
-      display: flex;
-      flex-direction: row;
+  font-family: 'Mikela';
+  src: url('//www.bloomrobbins.sk/cdn/shop/t/34/assets/Mikela-Bold.woff?v=142287985731815488401687268887') format('woff');
+}
+
+@font-face {
+  font-family: 'ABCMonumentGrotesk';
+  src: url('//www.bloomrobbins.sk/cdn/shop/t/34/assets/ABCMonumentGrotesk-Bold.woff2?v=71855437841205158051687268885') format('woff');
+}
+
+:root {
+    --red-bloom: oklch(61.53% 0.244 22.01);
+    --bg-bloom: oklch(93.94% 0.047 332.48);
+    --grey-bloom: oklch(66.65% 0 0);
+}
+
+div.overlay {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
-      border-radius: 1rem;
-      overflow: hidden;
+    text-align: center;
+    background: oklch(65.67% 0 0 / 73%);
     
+    z-index: 9999;
+    position: fixed;
+}
+.popup {
+    display: flex;
+    flex-direction: row;
+  
+    border-radius: 1rem;
+    overflow: hidden;
+  
+    height: 640px;
+    width: 870px;
+  
+    color: var(--red-bloom);
+
+}
+
+.hidden {
+    display: none;
+}
+
+.left-img {
+    background: url(//6f47b9-7f.myshopify.com/cdn/shop/t/2/assets/image.svg?v=72492941095743167081726047022);
+    background-size: cover;
+    background-repeat: no-repeat;
+  
+    flex: 0 0 400px;
+
+}
+
+.right-content {
+    background: var(--bg-bloom);
+}
+
+button, input {
+    border: none;
+}
+
+input.is-input {
+    padding-left: 1.5rem;
+  
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+      
+.is-input {
+    margin-top: 1rem;
+    border-radius: 1rem;
+    height: 6rem;
+}
+
+button:hover, button:active {
+    cursor: pointer;
+    box-shadow: 0px 0px 0.7rem grey;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: right;
+}
+
+.btn-container button {
+    background: none;
+    padding: 0.5rem 0.5rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+  
+    padding: 1rem 5rem;
+}
+
+h1.first, h1.second {
+    margin: 0;
+    color: var(--red-bloom);
+}
+
+h1.first {
+    font-family: "Mikela", serif;
+    font-size: 6rem;
+}
+
+h1.second {
+    font-size: 3.3rem;
+    font-weight: bold;
+    font-family: "ABCMonumentGrotesk", sans-serif;
+}
+
+p {
+    font-family: "ABCMonumentGrotesk", sans-serif;
+    color: var(--grey-bloom);
+    
+}
+
+.content > p {
+    padding: 0 1.5rem;
+}
+
+.agreement {
+    margin: 1.5rem 0;
+    padding: 0.15rem;
+    border-radius: 0.3rem;
+  
+    display: flex;
+  
+    font-size: 1.5rem;
+}
+
+.agreement input:hover, .agreement input:active {
+    cursor: pointer;
+}
+
+.agreement p {
+    margin: 0 0 0 0.35rem;
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+    color: var(--red-bloom);
+}
+
+button.btn-login, button.btn-success {
+    background: var(--red-bloom);
+    margin-top: 0;
+  
+    color: white;
+    font-family: "ABCMonumentGrotesk", sans-serif;
+}
+
+.err-required {
+    border: var(--red-bloom) solid 0.15rem;
+}
+
+.announcement {
+  padding: 3vw;
+
+  background: var(--bg-bloom);
+  border-radius: 1rem;
+
+  color: var(--red-bloom);
+  font-family: "Mikela", serif;
+}
+
+.announcement button.btn-success {
+  margin-top: 2vw;
+  width: 70%;
+}
+
+@media (max-width: 1000px) {
+    .popup {
       height: 640px;
-      width: 870px;
+      width: 660px;
+    }
     
-      color: var(--red-bloom);
-  
-  }
-  
-  .hidden {
-      display: none;
-  }
-  
-  .left-img {
-      background: url(//6f47b9-7f.myshopify.com/cdn/shop/t/2/assets/image.svg?v=72492941095743167081726047022);
-      background-size: cover;
-      background-repeat: no-repeat;
+    .left-img {
+      flex: 0 0 260px;  
+    }
     
-      flex: 0 0 400px;
+    .content {
+      padding: 3rem 2rem;
+    }
+}
+
+@media (max-width: 750px) {
+    .popup {
+      width: 560px;
+      height: 640px;
+    }
+
+    .left-image {
+      flex: 0 0 240px;
+    }
+
+    .content {
+      padding: 1rem 3rem;
+    }
   
-  }
-  
-  .right-content {
-      display: flex;
-      flex-direction: column;
-    
-      background: var(--bg-bloom);
-  }
-  
-  button, input {
-      border: none;
-  }
-  
-  input.is-input {
-      padding-left: 1.5rem;
-    
-      font-size: 1rem;
-      font-weight: bolder;
-  }
-        
+    h1.second {
+      font-size: 2.7rem;
+    }
+
   .is-input {
-      margin-top: 1rem;
-      border-radius: 1rem;
-      height: 6rem;
+    height: 4.5rem;
   }
-  
-  button:hover, button:active {
-      cursor: pointer;
-  }
-  
-  .btn-container {
-      display: flex;
-      justify-content: right;
-  }
-  
-  .btn-container button {
-      background: none;
-      padding: 0.5rem 0.5rem;
-  }
-  
-  .content {
-      display: flex;
-      flex-direction: column;
-    
-      padding: 1rem 5rem;
-  }
-  
-  h1.first, h1.second {
-      margin: 0;
-      color: var(--red-bloom);
-  }
-  
-  h1.first {
-      font-family: "Mikela", serif;
-      font-size: 4rem;
-  }
-  
-  h1.second {
-      font-size: 3.3rem;
-      font-weight: bold;
-      font-family: "ABCMonumentGrotesk", sans-serif;
-  }
-  
-  p {
-      font-family: "ABCMonumentGrotesk", sans-serif;
-      color: var(--grey-bloom);
-      
-  }
-  
-  .content > p {
-      padding: 0 1.5rem;
-  }
-  
-  .agreement {
-      margin: 1.5rem 0;
-      padding: 0.15rem;
-      border-radius: 0.3rem;
-    
-      display: flex;
-    
-      font-size: 1.5rem;
-  }
-  
-  .agreement input:hover, .agreement input:active {
-      cursor: pointer;
-  }
-  
-  .agreement p {
-      margin: 0 0 0 0.35rem;
-      text-align: left;
-  }
-  
-  a {
-      text-decoration: none;
-      color: var(--red-bloom);
-  }
-  
-  button.btn-login {
-      background: var(--red-bloom);
-      margin-top: 0;
-    
-      color: white;
-      font-family: "ABCMonumentGrotesk", sans-serif;
-  
-  
-  }
-  
-  button.btn-login:hover, button.btn-login:active {
-        box-shadow: 0px 0px 0.7rem grey;
-  }
-  
-  .err-required {
-      border: var(--red-bloom) solid 0.15rem;
-  }
-  
-  @media (max-width: 1000px) {
-      .popup {
-        height: 640px;
-        width: 660px;
-      }
-      
-      .left-img {
-        flex: 0 0 260px;  
-      }
-      
-      .content {
-        padding: 3rem 2rem;
-      }
-  }
-  
-  @media (max-width: 750px) {
-      .popup {
-        width: 560px;
-        height: 640px;
-      }
-  
-      .left-image {
-        flex: 0 0 240px;
-      }
-  
-      .content {
-        padding: 1rem 3rem;
-      }
-    
-      h1.second {
-        font-size: 2.7rem;
-      }
-  
-    .is-input {
-      height: 4.5rem;
+}
+
+@media (max-width: 600px) {
+    .popup {
+      height: 540px;
+      width: 420px;
     }
-  }
-  
-  @media (max-width: 600px) {
-      .popup {
-        height: 540px;
-        width: 420px;
-      }
-      .left-img {
-        display: none;
-      }
-  
-      .content {
-        padding: 0 5rem;
-      }
+    .left-img {
+      display: none;
     }
+
+    .content {
+      padding: 0 5rem;
+    }
+}
   
-  @media (max-width: 490px) {
-      .popup {
-        height: 580px;
-        width: 320px;
-      }
-      
-      .left-img {
-        display: none;
-      }
-  
-      .content {
-        padding: 0 2rem;
-      }
-  
-      h1.first {
-        font-size: 4.5rem;
-      }
-  
-      h1.second {
-        font-size: 2.6rem;
-      }
-  }
+@media (max-width: 490px) {
+    .popup {
+      height: 580px;
+      width: 320px;
+    }
+    
+    .left-img {
+      display: none;
+    }
+
+    .content {
+      padding: 0 2rem;
+    }
+
+    h1.first {
+      font-size: 4.5rem;
+    }
+
+    h1.second {
+      font-size: 2.6rem;
+    }
+}
